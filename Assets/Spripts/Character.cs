@@ -17,6 +17,7 @@ public class Character : MonoBehaviour
             isDead = true;
             HP = 0;
             Debug.Log("Character is dead");
+            Destroy(gameObject);
         }
     }
 }
