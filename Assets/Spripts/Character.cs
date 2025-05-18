@@ -4,7 +4,10 @@ public class Character : MonoBehaviour
 {
     public float HP = 100f;
     private bool isDead = false;
-   
+    void Update()
+    {
+        GetDamage(10*Time.deltaTime);
+    }
     public void GetDamage(float damage)
     {
         if (isDead) return;
