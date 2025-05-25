@@ -23,9 +23,4 @@ public class Character : MonoBehaviour
             Destroy(gameObject);
         }
     }
-    public void ReloadGame()
-    {
-        //Debug.Log("Reloading game...");
-        SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
-    }
 }
