@@ -26,6 +26,8 @@ public class Character : MonoBehaviour
     {
         if(GetComponent<WanderingAI>() is WanderingAI ai)
             ai.enabled = false;
+        if(Camera != null && Camera.GetComponent<RayShooter>() is RayShooter ray)
+            ray.enabled = false;
         transform.Rotate(-75, 0, 0);
         yield return new WaitForSeconds(1.5f);
         if (Camera != null)
