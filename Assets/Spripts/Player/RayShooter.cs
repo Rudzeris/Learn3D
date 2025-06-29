@@ -21,8 +21,16 @@ public class RayShooter : MonoBehaviour
             {
                 //StartCoroutine(SphereIndicator(hit.point));
                 Character enemy = hit.collider?.GetComponent<Character>();
-                if(enemy != null)
+                if (enemy != null)
+                {
                     enemy.GetDamage(50);
+                    //audioSource.PlayOneShot(hitAudioClip);
+
+                    //Managers.AudioManager.PlaySound(hitAudioClip);
+                    Messenger.Broadcast(GameEvents.PlayerAttacking);
+                    //audioSource.clip = hitAudioClip;
+                    //audioSource.Play(); // Прерырывает предыдущий звук
+                }
             }
         }
     }
